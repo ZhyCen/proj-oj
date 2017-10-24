@@ -1,30 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 import { Problem } from "../../models/problem.model";
-
-// const PROBLEMS: Problem[] = [{}];
 
 @Component({
   selector: 'app-problem-list',
-  template: `
-    <p>
-      problem-list works!
-    </p>
-    
-    <div class = "container">
-      <div class = "list-group">
-        <a class = "list-group-item">
-          
-        </a>
-      </div>
-    </div>
-  `,
-  styles: []
+  templateUrl: './problem-list.component.html',
+  styleUrls: ['./problem-list.component.css']
 })
 export class ProblemListComponent implements OnInit {
 
-  constructor() { }
+  problems: Problem[];
+
+  constructor(@Inject("data") private data) { }
 
   ngOnInit() {
+    this.getProblems();
+  }
+
+  getProblems(): void {
+    this.problems = this.data.getProblems();
   }
 
 }
