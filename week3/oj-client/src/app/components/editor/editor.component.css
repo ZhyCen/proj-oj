@@ -1,6 +1,5 @@
 @media screen {
   #editor {
-<<<<<<< HEAD
     height: 600px;
   }
   .lang-select{
@@ -21,13 +20,4 @@
     z-index: 40;
     width: 2px!important;
   }
-=======
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 600px;
-  }
->>>>>>> 0b755bda5b4ed5472c82863ffe816a168d69fbe2
 }
