@@ -27,9 +27,13 @@
         "../node_modules/bootstrap/dist/js/bootstrap.js",
         "../node_modules/ace-builds/src-min-noconflict/ace.js",
         "../node_modules/ace-builds/src-min-noconflict/theme-eclipse.js",
+<<<<<<< HEAD
         "../node_modules/ace-builds/src-min-noconflict/mode-java.js",
         "../node_modules/ace-builds/src-min-noconflict/mode-python.js",
         "../node_modules/ace-builds/src-min-noconflict/mode-c_cpp.js"
+=======
+        "../node_modules/ace-builds/src-min-noconflict/mode-java.js"
+>>>>>>> 0b755bda5b4ed5472c82863ffe816a168d69fbe2
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
