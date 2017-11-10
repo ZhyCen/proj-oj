@@ -43,7 +43,6 @@ int main() {
 
   ngOnInit() {
     this.editor = ace.edit("editor");
-<<<<<<< HEAD
     this.editor.setTheme('ace/theme/eclipse');
     this.resetEditor();
     this.editor.$blockScrolling = Infinity;
@@ -63,13 +62,4 @@ int main() {
     let userCode = this.editor.getValue();
     console.log(userCode);
   }
-
-=======
-    this.editor.setTheme('ace/theme.eclipse');
-    this.editor.getSession().setMode('ace/mode/java');
-    this.editor.setValue(this.defaultContent['Java']);
-    this.editor.$blockScrolling = Infinity;
-  }
-
->>>>>>> 0b755bda5b4ed5472c82863ffe816a168d69fbe2
 }
