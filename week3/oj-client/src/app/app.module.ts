@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
 import { HttpModule } from '@angular/http';
 
-import { routing } from "./app.routes";
+import { Routing } from "./app.routes";
 
 import { AppComponent } from './app.component';
 import { ProblemListComponent } from './components/problem-list/problem-list.component';
@@ -15,6 +15,7 @@ import { ProblemDetailComponent } from './components/problem-detail/problem-deta
 import { NewProblemComponent } from './components/new-problem/new-problem.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { EditorComponent } from './components/editor/editor.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +24,12 @@ import { ProfileComponent } from './components/profile/profile.component';
     ProblemDetailComponent,
     NewProblemComponent,
     NavbarComponent,
-    ProfileComponent
+    ProfileComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,
-    routing,
+    Routing,
     FormsModule,
     HttpModule
   ],
