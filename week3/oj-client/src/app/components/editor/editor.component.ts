@@ -69,7 +69,15 @@ int main() {
       if (this.editor.lastAppliedChange != e) {
         this.collaboration.change(JSON.stringify(e));
       }
-    })
+    });
+
+    this.editor.getSession().getSelection().on("changeCursor", () => {
+      let cursor = this.editor.getSession().getSelection().getCursor();
+      console.log("cursor move: "+ JSON.stringify(cursor));
+      this.collaboration.cursorMove(JSON.stringify(cursor));
+    });
+
+    this.collaboration.restoreBuffer();
   }
 
   setLanguage(language: string) {
