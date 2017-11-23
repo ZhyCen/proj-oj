@@ -19,7 +19,7 @@ express
 ```
 
 ## WEEK 1
-finish the front-end part, where it is able to display questions. 
+finish the front-end part, where it is able to display questions.
 
 To clone and run the program **for week1**
 
@@ -42,7 +42,7 @@ ng serve
 check the website on `localhost:4200`
 
 ## WEEK 2
-finish the front-end part, back-end part, that user can add questions themselves. the json data will be stored on [mlab.com](mlab.com).
+finish the front-end part, part of back-end part that user can add questions themselves. the json data will be stored on [mlab.com](mlab.com).
 
 Data will be dyamically add and show on the problem page.
 
@@ -54,7 +54,7 @@ git clone git@github.com:zhycen/proj-oj.git
 cd ./proj-oj/week2/
 ```
 
-### install depencecies for both client server and backend server 
+### install depencecies for both client server and backend server
 
 ```
 // in oj-client root folder
@@ -75,7 +75,33 @@ nodemon server
 
 check the website on `localhost:3000`
 
+## WEEK 3
+
+add ACE editor near question details. that allow users to type codes in different languages.
+
+utilized socket.io to establish connections between users and make it collaborative.
+
+utilized redis to restore the history of code.
+
+### launch app
+```
+cd week3
+chmod +x launcher.sh
+./launcher
+```
+this file will install all the dependencies and run the services, to stop the service, just press `Enter`.
 
 
+# WEEK 4
 
+add Docker and Flask into backend, that execute the code that written in ACE editor.
 
+Return result into front-ent.
+
+### launch app
+```
+cd week3
+chmod +x launcher.sh
+./launcher
+```
+this file will install all the dependencies and run the services, to stop the service, just press `Enter`.
