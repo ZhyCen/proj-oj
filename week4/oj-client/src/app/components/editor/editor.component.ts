@@ -12,13 +12,14 @@ export class EditorComponent implements OnInit {
 
   editor: any;
   sessionId: string;
+  output: string;
 
   public languages: string[] = ["Java", "C++", "Python"];
   language: string = "Java";
 
   defaultContent: object = {
-'Java': `public class Solution {
-  public statuc void main(String[] args) {
+'Java': `public class Example {
+  public static void main(String[] args) {
     // type your Java code here
   }
 }`,
@@ -30,7 +31,7 @@ int main() {
   return 0;
 }
 `,
-'Python' : `class Solution:
+'Python' : `class Example:
   def example():
   # Write your Python code here`
   };
@@ -42,6 +43,7 @@ int main() {
   }
 
   constructor(@Inject('collaboration') private collaboration,
+              @Inject('data') private data,
               private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -88,10 +90,16 @@ int main() {
   resetEditor(): void {
     this.editor.getSession().setMode('ace/mode/'+this.langMap[this.language]);
     this.editor.setValue(this.defaultContent[this.language]);
+    this.output = '';
   }
 
   submit(): void {
     let userCode = this.editor.getValue();
-    console.log(userCode);
+    let data = {
+      user_code : userCode,
+      lang: this.language.toLowerCase()
+    };
+    this.data.buildAndRun(data)
+        .then(res => this.output = res.text);
   }
 }
