@@ -98,6 +98,9 @@ add Docker and Flask into backend, that execute the code that written in ACE edi
 
 Return result into front-ent.
 
+### prerequest
+install python and docker
+
 ### launch app
 ```
 cd week3
