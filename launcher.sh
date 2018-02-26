@@ -10,7 +10,7 @@ cd ../oj-client
 npm install
 ng build --watch &
 cd ../executor
-f [ -d "tmp" ]; then
+if [ -d "tmp" ]; then
 sudo rm -rf tmp 
 fi
 mkdir tmp
