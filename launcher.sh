@@ -10,8 +10,11 @@ cd ../oj-client
 npm install
 ng build --watch &
 cd ../executor
+f [ -d "tmp" ]; then
+sudo rm -rf tmp 
+fi
 mkdir tmp
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
 sudo python executor_server.py &
 
 echo "=================================================="
