@@ -17,7 +17,6 @@ sudo python executor_server.py &
 echo "=================================================="
 read -p "PRESS [ENTER] TO TERMINATE PROCESSES." PRESSKEY
 
-sudo rm -rf tmp
 fuser -k 3000/tcp
 fuser -k 5000/tcp
 sudo service redis_6379 stop
